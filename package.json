@@ -1,0 +1,25 @@
+{
+  "name": "giFight",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "dependencies": {},
+  "devDependencies": {
+    "express": "^4.16.3",
+    "mongoose": "^5.2.4"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/giFight/giFight.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/giFight/giFight/issues"
+  },
+  "homepage": "https://github.com/giFight/giFight#readme"
+}
