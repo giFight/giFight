@@ -1,18 +1,45 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import axios from 'axios';
+import SearchForm from './Components/SearchForm';
+import GifList from './Components/GifList';
 
 class App extends Component {
-  render() {
+  
+  constructor() {
+    super();
+    this.state = {
+      gifs: []
+    };
+  } 
+
+  handleSubmit = (e, input) => {
+    e.preventDefault();
+    axios.get(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=dc6zaTOxFJmzC`)
+      .then(response => {
+        this.setState({
+          gifs: response.data.data
+        });
+      })
+      .catch(error => {
+        console.log('Error fetching and parsing data', error);
+      });
+  }
+
+
+
+  render() { 
+    console.log(this.state.gifs);
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+      <div className='main-container col-lg-8 mx-auto'>
+        <div className="search-container" style={{width: ''}}>
+          <div className="search-bar">
+            <SearchForm handleSubmittedForm={this.handleSubmit} />      
+          </div>   
+          <div className="main-content mx-auto">
+            <GifList data={this.state.gifs} />
+          </div>
+        </div>    
       </div>
     );
   }
