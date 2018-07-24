@@ -16,9 +16,11 @@ const GifList = props => {
   );
   
   return(
-    <ul className="gif-list" style={styles.listStyles}>
-      {gifs}
-    </ul> 
+    <div className='inner-container'>
+      <ul className="gif-list" style={styles.listStyles}>
+        {gifs}
+      </ul> 
+    </div>
   );
 }
 

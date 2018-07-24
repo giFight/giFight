@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Gif = props => (
-  <li className="gif-wrap">
+  <li className="gif-wrap" style={{margin:'.5rem'}}>
     <img src={props.url} alt="" onClick={pickGif}/>
   </li>
 );
