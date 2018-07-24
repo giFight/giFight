@@ -1,8 +1,40 @@
+/* search page start */
 ul,ol {
   padding: 0;
   margin: 0;
 }
 
+.arrow-container{
+  position:relative;
+}
+
+.outer-container{
+  overflow:auto; 
+  height:22rem; 
+  width:41rem; 
+  border-Style: solid;
+  border-Color:cyan;
+  border-Radius: 25px;
+}
+
+.fa-angle-left{
+  cursor: pointer;
+  font-Size: 6em; 
+  float:left; 
+  position:absolute; 
+  top:50%;
+  transform:translateY(-50%);
+}
+
+.fa-angle-right{
+  cursor: pointer;
+  font-Size: 6em; 
+  float:right; 
+  position:absolute; 
+  top:50%;
+  transform:translateY(-50%);
+  right: 0;
+}
 
 .active-cyan input[type=text]:focus:not([readonly]) {
   border-bottom: 1px solid #4dd0e1;
@@ -18,3 +50,4 @@ ul,ol {
 .active-cyan .fa {
   color: #4dd0e1;
 }
+/* search page end */
