@@ -21,7 +21,7 @@ export default class SearchForm extends Component {
   
   render() {  
     return (
-      <form className="form-inline md-form form-sm active-cyan" onSubmit={this.handleSubmit} >
+      <form className="form-inline md-form form-sm active-cyan" style={{marginBottom:'2rem'}} onSubmit={this.handleSubmit} >
         <i className="fa fa-search" aria-hidden="true" style={{fontSize: '25px',padding: '.5em 0 .5em', marginRight: '-25px'}}></i>
         <input type="text"
               name="search"
