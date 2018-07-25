@@ -50,4 +50,12 @@ ul,ol {
 .active-cyan .fa {
   color: #4dd0e1;
 }
+
+.logo {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
 /* search page end */
