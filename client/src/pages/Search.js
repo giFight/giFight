@@ -36,7 +36,9 @@ class Search extends Component {
     return (
       <div className='main-container col-lg-8 mx-auto'>
         <Navbar />
-        <Jumbotron />
+        <Jumbotron> 
+          <h1 className="display-4">Topic goes here...</h1>
+        </Jumbotron>
         <div className="search-container">
           <div className="search-bar">
             <SearchForm handleSubmittedForm={this.handleSubmit} />      
