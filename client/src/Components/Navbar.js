@@ -22,6 +22,9 @@ export default class Navbar extends Component {
               <a className="nav-link" href="#">About Us</a>
             </li>
           </ul>
+          <div className="logo">
+            <img src={require('../logo/gifFight.png')} alt="logo" />
+          </div>
           <div className="btn-group">
             <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Username
