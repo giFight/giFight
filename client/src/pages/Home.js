@@ -12,6 +12,9 @@ class Home extends Component {
 
   render() { 
     return (
+      <div className='home-main-container'>
+        <div className="admin-dashboard">
+          <img src={require("../logo/fight.png")} className="bg" />
       <div className='home-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>
@@ -21,6 +24,8 @@ class Home extends Component {
         </Jumbotron>
         <CreateForm />
       </div>
+    </div>
+  </div>
     );
   }
 

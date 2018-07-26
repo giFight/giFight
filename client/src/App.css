@@ -1,4 +1,16 @@
 /* search page start */
+body {
+  background-color:rgb(0, 153, 204);
+}
+
+img.bg {
+  width: 250px;
+  height: 250px;
+  position: fixed;
+  top: 45px;
+  left: 2px;
+}
+
 ul,ol {
   padding: 0;
   margin: 0;
