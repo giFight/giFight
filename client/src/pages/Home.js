@@ -14,7 +14,7 @@ class Home extends Component {
     return (
       <div className='home-main-container'>
         <div className="admin-dashboard">
-          <img src={require("../logo/fight.png")} className="bg" />
+          <img src={require("../logo/g.png")} className="bg" />
       <div className='home-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>

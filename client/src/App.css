@@ -63,11 +63,12 @@ ul,ol {
   color: #4dd0e1;
 }
 
-.logo {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
+#logo {
+  height: 42px;
+  width: 15%;
+  position: fixed;
+  margin-right: 50%;
+  margin-left: 340px;
 }
 
 /* search page end */
