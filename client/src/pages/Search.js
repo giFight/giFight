@@ -35,7 +35,7 @@ class Search extends Component {
     console.log(this.state.gifs);
     return (
     <div className="admin-dashboard">
-        <img src={require("../logo/fight.png")} className="bg" />
+        <img src={require("../logo/g.png")} className="bg" />
       <div className='main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron> 
