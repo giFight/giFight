@@ -4,6 +4,8 @@ import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import CreateBtn from '../Components/CreateBtn';
 import CreateForm from '../Components/CreateForm';
+import Footer from '../Components/Footer';
+import TopicBtn from '../Components/TopicBtn'
 
 
 class Home extends Component {
@@ -23,8 +25,11 @@ class Home extends Component {
           <CreateBtn />
         </Jumbotron>
         <CreateForm />
+        <TopicBtn/>
       </div>
+      
     </div>
+    <Footer/>
   </div>
     );
   }
