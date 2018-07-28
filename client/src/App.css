@@ -11,7 +11,7 @@ ul,ol {
 .outer-container{
   overflow:auto; 
   height:22rem; 
-  width:41rem; 
+  width:47rem; 
   border-Style: solid;
   border-Color:cyan;
   border-Radius: 25px;
@@ -36,10 +36,6 @@ ul,ol {
   right: 0;
 }
 
-.active-cyan input[type=text]:focus:not([readonly]) {
-  border-bottom: 1px solid #4dd0e1;
-  box-shadow: 0 1px 0 0 #4dd0e1;
-}
 
 .active-cyan input[type=text] {
   border: 0;
@@ -51,3 +47,38 @@ ul,ol {
   color: #4dd0e1;
 }
 /* search page end */
+
+/* gifersation font */
+.navbar-brand{
+  font-family: 'Bangers', cursive;
+}
+
+/* convo page */
+.fa-comment-alt{
+  cursor: pointer;
+  font-Size: 3em; 
+  float:right; 
+  position:absolute; 
+  top:50%;
+  transform:translateY(-50%);
+  right: 0;
+}
+
+.convo-section{
+  position:relative;
+}
+
+.outer-convo-container{
+  overflow:auto; 
+  height:22rem; 
+  width:50rem; 
+  border-Style: solid;
+  border-Color:cyan;
+  border-Radius: 25px;
+}
+
+.convo-thread div:nth-child(even) {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+}
