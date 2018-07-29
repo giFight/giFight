@@ -22,6 +22,7 @@ export default class Navbar extends Component {
               <a className="nav-link" href="#">About Us</a>
             </li>
           </ul>
+          <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
           <div className="btn-group">
             <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Username

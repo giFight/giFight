@@ -62,6 +62,8 @@ class Search extends Component {
   render() { 
     console.log(this.state);
     return (
+    <div className="admin-dashboard">
+        <img src={require("../logo/g.png")} className="bg" />
       <div className='main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron> 
@@ -80,6 +82,7 @@ class Search extends Component {
           </div>   
         </div>    
       </div>
+    </div>
     );
   }
 }
