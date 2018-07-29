@@ -1,4 +1,4 @@
-/* search page start */
+/* SEARCH PAGE START */
 ul,ol {
   padding: 0;
   margin: 0;
@@ -46,14 +46,14 @@ ul,ol {
 .active-cyan .fa {
   color: #4dd0e1;
 }
-/* search page end */
+/* SEARCH PAGE END */
 
 /* gifersation font */
 .navbar-brand{
   font-family: 'Bangers', cursive;
 }
 
-/* convo page */
+/* CONVO PAGE START*/
 .fa-comment-alt{
   cursor: pointer;
   font-Size: 3em; 
@@ -71,14 +71,20 @@ ul,ol {
 .outer-convo-container{
   overflow:auto; 
   height:22rem; 
-  width:50rem; 
+  width:47rem; 
   border-Style: solid;
   border-Color:cyan;
   border-Radius: 25px;
 }
 
+/* gifs are displayed either on left ot right */
 .convo-thread div:nth-child(even) {
   margin-left: auto;
   display: flex;
   justify-content: flex-end;
 }
+
+.searchContainer{
+  margin-bottom: 5rem;
+}
+/* CONVO PAGE END */

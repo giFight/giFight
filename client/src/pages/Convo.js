@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
-// import GifList from '../Components/GifList';
 import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
-// import NoGifs from './Components/NoGifs';
+import SearchContainer from '../Components/SearchContainer';
 
 
 
@@ -15,16 +14,15 @@ class Convo extends Component {
     super();
     this.state = {
       topic: "",
-      gifs: [], //for the modal?
-      // nextPageBtn: false,
-      isModalOpen: false
+      gifs: [], 
     };
   } 
 
-  //* for the modal
+
+  // this is displaying (on page load) all the saved gifs belonging to the convo
   componentDidMount() {
     const currentConvo = this.props.match.params.id;
-    axios.get(`http://localhost:3000/api/convos/${currentConvo}`)
+    axios.get(`/api/convos/${currentConvo}`)
       .then(response => {
         this.setState(prevState => ({
           topic: response.data.topicName,
@@ -32,25 +30,31 @@ class Convo extends Component {
         }));
       })
       .catch(error => {
-        console.log('Error fetching and parsing data', error);
+        console.log('Error fetching and parsing data', error.message);
       });
   }
 
-  handleModalOpen = () => {
-    this.setState(prevState => ({
-      isModalOpen: true
-    }))
-  }
   
-
-  // <ConvoThread data={this.state.gifThread} selectedGif={this.handleGifClick} /> 
   // if length of gifThread is 0 (0 is equal to false) then show no gifs message
   renderNoGifsMessage = () => {
-    return this.state.gifs.length ? <ConvoThread data={this.state.gifs} /> : <h1>No Gifs</h1>;
+    return this.state.gifs.length ? <ConvoThread data={this.state.gifs} /> : <h1>No Gifs Yet</h1>;
   }
 
-  renderModal = () => {
-    // return this.state.isModalOpen ? <Modal ...> : null;
+
+  // this is the funcionality for the select gif button that sends the user's clicked/selected gif to the convo
+  handleSelectButton = (e, gifUrl) => {    
+    const currentConvo = this.props.match.params.id;
+    axios.put(`/api/convos/${currentConvo}`, {
+      gifUrls: gifUrl
+    })
+      .then(response => {
+        this.setState(prevState => ({
+          gifs: [...prevState.gifs, response.data.gifUrl]
+        }));
+      })
+      .catch(error => {
+        console.log('Error fetching and parsing data', error.message);
+      });
   }
 
   render() {
@@ -61,13 +65,14 @@ class Convo extends Component {
         <Jumbotron>
           <h1 className="display-4">{this.state.topic.length ? this.state.topic : "Topic name"}</h1>
         </Jumbotron>
-        <div className='convo-section'>        
+        <div className='convo-section'>  
+          <div className='searchContainer'>
+            <SearchContainer convoButton={this.handleSelectButton} />    
+          </div>   
           <div className="outer-convo-container mx-auto">
             {this.renderNoGifsMessage()}
           </div>              
-          <i className="far fa-comment-alt" onClick={this.handleModalOpen}></i>
         </div>
-        {this.renderModal()}
       </div>
     );
   }

@@ -11,7 +11,7 @@ const routes = require("./routes");
 // var db = require("./models");
 // require("./models/Article");
 
-const PORT = process.env.PORT || 4000;
+const PORT = process.env.PORT || 3002;
 
 // Initialize Express
 const app = express();

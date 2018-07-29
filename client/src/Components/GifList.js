@@ -2,6 +2,9 @@ import React from 'react';
 import Gif from './Gif';
 import NoGifs from './NoGifs';
 
+
+//* this compnent is the search box
+
 const GifList = props => { 
   const styles = {
     listStyles: {

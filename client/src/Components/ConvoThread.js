@@ -1,14 +1,11 @@
 import React from 'react';
 import ConvoItem from './ConvoItem';
 
+
+//* this component is the convo box
+
 const ConvoThread = props => { 
-  const styles = {
-    convoStyles: {
-      // listStyle: 'none',
-      // display: 'flex',
-      // flexWrap: 'wrap',
-    }
-  };
+  
 
   const gifs = props.data.map(url => {
     return <ConvoItem url={url} key={url} />
@@ -17,7 +14,7 @@ const ConvoThread = props => {
   
   return(
     <div className='inner-convo-container'>
-      <ul className="convo-thread" style={styles.listStyles}>
+      <ul className="convo-thread">
         {gifs}
       </ul> 
     </div>

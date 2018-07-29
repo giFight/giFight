@@ -1,5 +1,6 @@
 import React from 'react';
 
+//* this compnent is the gif itself in the search display box
 const Gif = props => (
   <li className="gif-wrap" style={{margin:'.5rem'}}>
     <img src={props.url} alt="" onClick={(e) => pickGif(e, props)}/>

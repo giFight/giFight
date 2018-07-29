@@ -8,6 +8,8 @@ import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 // import NoGifs from './Components/NoGifs';
 
+//* NOT USING THIS PAGE RIGHT NOW
+
 class Search extends Component {
   
   constructor() {
