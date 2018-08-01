@@ -17,7 +17,7 @@ class HowTo extends Component {
         <Navbar />
         <Jumbotron>
           <h1 className="display-4">How To</h1>
-          <p>Pick a topic or create a new one.</p>
+          <p>This app was created for those who would rather speak in GIFs.</p>
         </Jumbotron>
         
 
