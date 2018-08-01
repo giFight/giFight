@@ -3,6 +3,8 @@ import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import CreateForm from '../Components/CreateForm';
+import Footer from '../Components/Footer';
+import TopicBtn from '../Components/TopicBtn'
 
 
 class Home extends Component {
@@ -21,8 +23,11 @@ class Home extends Component {
           <p>Pick a topic or create a new one.</p>
         </Jumbotron>
         <CreateForm />
+        <TopicBtn/>
       </div>
+      
     </div>
+    <Footer/>
   </div>
     );
   }
