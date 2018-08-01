@@ -1,16 +1,17 @@
 .media > .media-left {
   background: #fff;
   border-radius: 2px;
-  height: 165px;
+  height: 200px;
   overflow: hidden;
   margin: 1rem;
   position: relative;
-  width: 250px;
+  width: 290px;
   box-shadow: 0 3px 6px #999, 0 3px 6px #999;
-  text-align: left;
+  text-align: center;
 }
 
 .media  {
+  margin: 15px;
   height: auto;
   border: 2px;
   overflow: hidden;
@@ -28,6 +29,7 @@
 
 .media-heading {
   text-align: center;
+  margin-top: 20px;
 }
 .style_prevu_kit
 {

@@ -7,12 +7,12 @@ const Katie = ({children})=> (
   //Katie
   <div class="media">
   <div class="media-left">
-      <img class="media-object" src="https://media.giphy.com/media/moyzrwjUIkdNe/giphy-downsized.gif" alt="...">
+      <img class="media-object" src="https://media3.giphy.com/media/mokQK7oyiR8Sk/giphy.gif" alt="...">
       </img>
   </div>
   <div class="media-body">
-    <h4 class="media-heading">Katie Lewis</h4>
-    <p> asdhashdahdioahsdihasd </p>
+    <h4 class="media-heading">Katie</h4>
+    <p> iajoisdjoiasjdoi </p>
   </div>
   </div>
   
