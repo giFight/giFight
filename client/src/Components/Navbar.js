@@ -10,7 +10,7 @@ export default class Navbar extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand" href="#">Gifersation</a>
+          <a className="navbar-brand">Gifersation</a>
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
               <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>
@@ -22,17 +22,15 @@ export default class Navbar extends Component {
               <a className="nav-link" href="#">About Us</a>
             </li>
           </ul>
-          <div className="logo">
-            <img src={require('../logo/gifFight.png')} alt="logo" />
-          </div>
+          <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
           <div className="btn-group">
             <button type="button" className="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Username
             </button>
             <div className="dropdown-menu dropdown-menu-right">
-              <button className="dropdown-item" type="button">Action</button>
-              <button className="dropdown-item" type="button">Another action</button>
-              <div class="dropdown-divider"></div>
+              <button className="dropdown-item" type="button">My Convos</button>
+              <button className="dropdown-item" type="button">My Likes</button>
+              <div className="dropdown-divider"></div>
               <button className="dropdown-item" type="button">Sign Out</button>
             </div>
           </div>
