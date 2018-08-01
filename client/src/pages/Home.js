@@ -2,8 +2,9 @@ import React, { Component } from 'react';
 import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
-import CreateBtn from '../Components/CreateBtn';
 import CreateForm from '../Components/CreateForm';
+import Footer from '../Components/Footer';
+import TopicBtn from '../Components/TopicBtn'
 
 
 class Home extends Component {
@@ -20,11 +21,13 @@ class Home extends Component {
         <Jumbotron>
           <h1 className="display-4">Hello, Matthew!</h1>
           <p>Pick a topic or create a new one.</p>
-          <CreateBtn />
         </Jumbotron>
         <CreateForm />
+        <TopicBtn/>
       </div>
+      
     </div>
+    <Footer/>
   </div>
     );
   }
