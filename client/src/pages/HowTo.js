@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
-import CreateBtn from '../Components/CreateBtn';
+// import CreateBtn from '../Components/CreateBtn';
 import CreateForm from '../Components/CreateForm';
 import TopicBtn from '../Components/TopicBtn';
 import HowToInfo from '../Components/HowToInfo';
