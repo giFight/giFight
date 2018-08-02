@@ -5,7 +5,6 @@ import HowTo from './pages/HowTo';
 import AboutUs from './pages/AboutUs';
 import Convo from './pages/Convo';
 import Login from './pages/login';
-import Github from './pages/github'
 import Signup from './pages/signup'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
@@ -18,11 +17,9 @@ const App = () => (
         <Route exact path ='/howto' component={HowTo}/>
         <Route exact path = '/aboutus' component={AboutUs}/>
         <Route exact path='/convo/:id' component={Convo} />
-
         <Route exact path='/search' component={Search} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/logout' component={Home} />
-        <Route exact path='/auth/github' component={Github} />
         <Route exact path='/signup' component={Signup} />
       </Switch>
     </div>

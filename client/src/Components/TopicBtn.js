@@ -39,4 +39,4 @@ const TopicBtn = props => {
 
 
 
-// export default TopicBtn;
+export default TopicBtn;

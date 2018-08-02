@@ -8,7 +8,7 @@ let io = require('socket.io')(server)
 const morgan = require('morgan')
 const user = require('./routes/api/users')
 const session = require('express-session')
-const passport = require('./client/passport')
+const passport = require('./passport')
 const MongoStore = require('connect-mongo')(session)
 
 
@@ -125,7 +125,7 @@ app.use(passport.initialize())
 app.use(passport.session()) // calls serializeUser and deserializeUser
 
 // this is the post route
-app.use('/user', user)
+app.use('/auth', user)
 
 app.post('/', function(){
   console.log("Hit post route")

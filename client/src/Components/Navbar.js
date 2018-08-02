@@ -28,17 +28,13 @@ export default class Navbar extends Component {
               Username
             </button>
             <div className="dropdown-menu dropdown-menu-right">
-<<<<<<< Updated upstream
               <button className="dropdown-item" type="button">My Convos</button>
               <button className="dropdown-item" type="button">My Likes</button>
               <div className="dropdown-divider"></div>
-              <button className="dropdown-item" type="button">Sign Out</button>
-=======
               <button className="dropdown-item" type="button"><a href='/login'>Log In</a></button>
               <button className="dropdown-item" type="button"><a href='/signup'>Sign Up</a></button>
               <div class="dropdown-divider"></div>
               <button className="dropdown-item" type="button"><a href='/logout'>Log Out</a></button>
->>>>>>> Stashed changes
             </div>
           </div>
         </div>
