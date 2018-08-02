@@ -11,9 +11,6 @@ let io = require('socket.io')(server)
 
 const PORT = process.env.PORT || 3002;
 
-// Initialize Express
-const app = express();
-
 
 
 // Configure middleware
@@ -92,17 +89,6 @@ removeSocket = (socket_id) => {
         users = clone_users;
     }
 };
-// Set mongoose to leverage built in JavaScript ES6 Promises
-// Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, function(err, db) {
-  if (err) {
-    throw err
-  }
-
-  console.log("connected ...")
-});
-
 
 // Start the server
 server.listen(PORT, () => {
