@@ -20,15 +20,24 @@ class Home extends Component {
         <Navbar />
         <Jumbotron>
           <h1 className="display-4">Hello, Matthew!</h1>
-          <p>Pick a topic or create a new one.</p>
+          <p></p>
         </Jumbotron>
         <CreateForm />
-        <TopicBtn/>
+        <div class="media">
+     <div class="media-body">
+       <h4 class="media-heading"> Here are some ideas if you aren't creative enough </h4>
+       <p> If you can't think of your own, try one of these. Type whichever you choose in the space above.
+       </p>
+       <TopicBtn/>
+     </div>
+     </div>
+       
       </div>
       
     </div>
-    <Footer/>
   </div>
+  
+  
     );
   }
 
