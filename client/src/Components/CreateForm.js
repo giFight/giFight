@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class CreateForm extends Component {
   
   state = {
-    topic: '',
+    search: '',
   }
   
   onSearchChange = e => {
@@ -14,8 +14,9 @@ export default class CreateForm extends Component {
   }
   
   handleSubmit = e => {
+    e.preventDefault()
     const input = this.state.search;
-    this.props.handleSubmittedForm(e, input);
+    this.props.handleSubmittedForm(input);
     this.setState({ search: '' });
   }
   
