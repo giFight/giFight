@@ -4,6 +4,7 @@ import Navbar from '../Components/Navbar';
 import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
 import SearchContainer from '../Components/SearchContainer';
+import Chat from '../Components/chat/chat.js'
 
 
 
@@ -67,10 +68,10 @@ class Convo extends Component {
         </Jumbotron>
         <div className='convo-section'>  
           <div className='searchContainer'>
-            <SearchContainer convoButton={this.handleSelectButton} />    
+            {/* <SearchContainer convoButton={this.handleSelectButton} />     */}
           </div>   
           <div className="outer-convo-container mx-auto">
-            {this.renderNoGifsMessage()}
+          <Chat />
           </div>              
         </div>
       </div>
