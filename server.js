@@ -9,12 +9,12 @@ let io = require('socket.io')(server)
 
 
 
+const PORT = process.env.PORT || 3002;
 
-// Require all models
-// var db = require("./models");
-// require("./models/Article");
+// Initialize Express
+const app = express();
 
-const PORT = process.env.PORT || 8989;
+
 
 // Configure middleware
 
@@ -26,17 +26,20 @@ app.use(bodyParser.json())
 app.use(routes)
 
 
-// if (process.env.NODE_ENV === "production"){
-//   // Use express.static to serve the client/build folder as a static directory
-//   app.use(express.static("client/build")); 
-// }
+if (process.env.NODE_ENV === "production"){
+  // Use express.static to serve the client/build folder as a static directory
+  app.use(express.static("client/build")); 
+}
 
 
 // Connect to the Mongo DB
 
-// If deployed, use the deployed database. Otherwise use the local gifersationDB database
 
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/gifersationDB";
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(process.env.MONGODB_URL);
+
 
 let users = {}
 
@@ -99,6 +102,7 @@ mongoose.connect(MONGODB_URI, function(err, db) {
 
   console.log("connected ...")
 });
+
 
 // Start the server
 server.listen(PORT, () => {

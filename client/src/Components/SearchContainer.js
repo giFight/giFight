@@ -6,6 +6,7 @@ import axios from 'axios';
 import SearchForm from '../Components/SearchForm';
 import GifList from '../Components/GifList';
 
+
 class SearchContainer extends Component {
   
   constructor() {
@@ -19,7 +20,8 @@ class SearchContainer extends Component {
 
   // display trending gifs by default
   componentDidMount() { 
-    axios.get('http://api.giphy.com/v1/gifs/trending?api_key=dc6zaTOxFJmzC')
+    const apiKey = process.env.REACT_APP_SECRET_KEY
+    axios.get(`http://api.giphy.com/v1/gifs/trending?api_key=${apiKey}`)
       .then(response => {
         this.setState({
           gifs: response.data.data
@@ -32,8 +34,9 @@ class SearchContainer extends Component {
   
   // handles gif search form input
   handleSubmit = (e, input) => {
+    const apiKey = process.env.REACT_APP_SECRET_KEY
     e.preventDefault();
-    axios.get(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=dc6zaTOxFJmzC`)
+    axios.get(`http://api.giphy.com/v1/gifs/search?q=${input}&api_key=${apiKey}`)
       .then(response => {
         this.setState({
           gifs: response.data.data
@@ -60,7 +63,7 @@ class SearchContainer extends Component {
 
   // this renders select button and listens for the click event
   renderSelectBtn = () => {
-    return this.state.addToConvoBtn ? <i className="fas fa-angle-right" onClick={this.handleConvoButton}></i> : ''
+    return this.state.addToConvoBtn ? <i className="fas fa-plus" onClick={this.handleConvoButton}></i> : ''
   }
 
   render() { 
