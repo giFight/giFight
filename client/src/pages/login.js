@@ -3,8 +3,6 @@ import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import axios from 'axios'
-import CreateBtn from '../Components/CreateBtn';
-import CreateForm from '../Components/CreateForm';
 
 class Login extends Component {
   constructor() {

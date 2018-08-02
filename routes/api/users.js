@@ -2,7 +2,7 @@ const express = require('express')
 const router = express.Router();
 const usersController = require("../../controllers/usersController");
 const User = require('../../models/user')
-const passport = require('../../client/passport')
+const passport = require('../../passport')
 
 router.post('/', (req, res) => {
   console.log('user signup');

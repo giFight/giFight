@@ -45,7 +45,6 @@ if (process.env.NODE_ENV === "production"){
   // Use express.static to serve the client/build folder as a static directory
   app.use(express.static("client/build")); 
 }
-
 // Connect to the Mongo DB
 
 // if (process.env.NODE_ENV === "production"){
