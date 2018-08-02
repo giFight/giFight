@@ -5,12 +5,6 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 
 
-
-
-// Require all models
-// var db = require("./models");
-// require("./models/Article");
-
 const PORT = process.env.PORT || 3002;
 
 // Initialize Express
@@ -26,28 +20,18 @@ app.use(bodyParser.json())
 app.use(routes)
 
 
-// if (process.env.NODE_ENV === "production"){
-//   // Use express.static to serve the client/build folder as a static directory
-//   app.use(express.static("client/build")); 
-// }
+if (process.env.NODE_ENV === "production"){
+  // Use express.static to serve the client/build folder as a static directory
+  app.use(express.static("client/build")); 
+}
 
 
 // Connect to the Mongo DB
-
-// If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
-
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/gifersationDB";
-
 
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI);
-
-
-
-
-
+mongoose.connect(process.env.MONGODB_URL);
 
 // Start the server
 app.listen(PORT, function() {
