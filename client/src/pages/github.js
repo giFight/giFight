@@ -2,12 +2,11 @@ import React, { Component } from 'react';
 import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
+import CreateBtn from '../Components/CreateBtn';
 import CreateForm from '../Components/CreateForm';
-import Footer from '../Components/Footer';
-import TopicBtn from '../Components/TopicBtn'
 
 
-class Home extends Component {
+class Github extends Component {
 
 
 
@@ -15,23 +14,19 @@ class Home extends Component {
     return (
       <div className='home-main-container'>
         <div className="admin-dashboard">
-          <img src={require("../logo/g.png")} className="bg" />
+          <img src={require("../logo/fight.png")} className="bg" />
       <div className='home-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>
-          <h1 className="display-4">Hello, Matthew!</h1>
-          <p>Pick a topic or create a new one.</p>
+          <h1>This should f***** authenticate</h1>
+          <a class="btn btn-block btn-social btn-twitter" href='/auth/github'>
+    <span class="fa fa-github"></span> Sign in with Github</a>
         </Jumbotron>
-        <CreateForm />
-        <TopicBtn/>
       </div>
-      
     </div>
-    <Footer/>
   </div>
     );
   }
-
 }
 
-export default Home;
+export default Github;
