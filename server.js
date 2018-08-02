@@ -23,13 +23,12 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
+app.use(routes)
+
 if (process.env.NODE_ENV === "production"){
   // Use express.static to serve the client/build folder as a static directory
   app.use(express.static("client/build")); 
 }
-
-app.use(routes)
-
 // Connect to the Mongo DB
 
 // If deployed, use the deployed database. Otherwise use the local mongoHeadlines database
