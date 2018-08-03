@@ -35,6 +35,9 @@ if (process.env.NODE_ENV === "production"){
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
+console.log(`
+process.env.MONGODB_URL: ${ process.env.MONGODB_URL }
+`)
 mongoose.connect(process.env.MONGODB_URL);
 
 
