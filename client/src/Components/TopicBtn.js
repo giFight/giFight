@@ -26,7 +26,7 @@ const TopicBtn = props => {
   );
   
   return(
-    <button type = "button" className="btn"> {props.name} </button>
+    <button type = "button" className="btn btn-danger"> {props.name} </button>
   );
 }
 
