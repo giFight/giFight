@@ -10,23 +10,29 @@ import "./TopicBtn.css";
 const TopicBtn = props => { 
   
   //Arrays of topics (Each array is a different color)
-  const topicList = ["Friday", "Hungover", "My weekend", "Where's David", "Me at work", "Cats on drugs"];
-  const topicListTwo = ["Where's Waldo", "Hello", "My weekend", "Where's David", "Me at work", "I need food"];
-  const topicListThree = ["Where's Waldo", "Hello", "My weekend", "HIIIIII", "Me at work", "I need food"];
+  const topicList = ["Friday", "Hungover", "My weekend", "Where's David?", "Me at work", "Cats", "Dogs"];
+  const topicListTwo = ["Where's Waldo?", "Sunday Funday", "YOLO", "Shots o' clock", "Me at work", "People of Bart"];
+  const topicListThree = ["LIT", "Love", "Selfie", "Motivation", "I'm done", "I need food", "Aloha"];
+  const topicListFour = ["My family", "Walmart People", "Trump", "JJ"]
 
   let topics = topicList.map(topic =>
     <button type = "button" className="btn btn-success"> {props.name} </button>
   );
-  <br></br>
+  
   let topicsTwo = topicListTwo.map(topic =>
     <button type = "button" className="btn btn-danger"> {topic} </button>
   );
   let topicsThree = topicListThree.map(topic =>
     <button type = "button" className="btn btn-info"> {topic} </button>
   );
+  let topicsFour = topicListFour.map(topic =>
+    <button type = "button" className="btn btn-success"> {topic} </button>
+  );
   
   return(
+
     <button type = "button" className="btn btn-danger"> {props.name} </button>
+
   );
 }
 

@@ -20,13 +20,13 @@ const PORT = process.env.PORT || 3002;
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
+if (process.env.NODE_ENV === "production"){
+  // Use express.static to serve the client/build folder as a static directory
+  app.use(express.static("client/build"));
+}
 app.use(routes)
 
 
-if (process.env.NODE_ENV === "production"){
-  // Use express.static to serve the client/build folder as a static directory
-  app.use(express.static("client/build")); 
-}
 
 
 // Connect to the Mongo DB
@@ -35,8 +35,13 @@ if (process.env.NODE_ENV === "production"){
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-console.log('\n\nprocess.env.MONGODB_URL: ', process.env.MONGODB_URL, '\n\n')
-mongoose.connect(process.env.MONGODB_URL);
+
+console.log(`
+process.env.MONGODB_URI: ${ process.env.MONGODB_URI }
+`)
+
+mongoose.connect(process.env.MONGODB_URI);
+
 
 
 let users = {}
