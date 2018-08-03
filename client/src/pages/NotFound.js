@@ -18,14 +18,8 @@ class AboutUs extends Component {
         </Jumbotron>
         <NotFoundGif />
       </div>
-
-    
-
-
     );
-
   }
-
 }
 
 export default AboutUs;
