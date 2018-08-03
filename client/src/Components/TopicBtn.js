@@ -16,7 +16,7 @@ const TopicBtn = props => {
   const topicListFour = ["My family", "Walmart People", "Trump", "JJ"]
 
   let topics = topicList.map(topic =>
-    <button type = "button" className="btn btn-success"> {topic} </button>
+    <button type = "button" className="btn btn-success"> {props.name} </button>
   );
   
   let topicsTwo = topicListTwo.map(topic =>
@@ -30,14 +30,9 @@ const TopicBtn = props => {
   );
   
   return(
-    <div className='inner-container'>
-      <ul className="topic-list" >
-        {topics}
-        {topicsTwo}
-        {topicsThree}
-        {topicsFour}
-      </ul> 
-    </div>
+
+    <button type = "button" className="btn btn-danger"> {props.name} </button>
+
   );
 }
 

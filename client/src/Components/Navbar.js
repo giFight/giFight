@@ -10,7 +10,7 @@ export default class Navbar extends Component {
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
-          <a className="navbar-brand">Gifersation</a>
+          {/* <a className="navbar-brand">Gifersation</a> */}
           <ul className="navbar-nav mr-auto mt-2 mt-lg-0">
             <li className="nav-item active">
               <a className="nav-link" href="#">Home <span className="sr-only">(current)</span></a>

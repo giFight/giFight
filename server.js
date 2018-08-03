@@ -35,11 +35,13 @@ app.use(routes)
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
+
 console.log(`
 process.env.MONGODB_URI: ${ process.env.MONGODB_URI }
 `)
 
 mongoose.connect(process.env.MONGODB_URI);
+
 
 
 let users = {}
