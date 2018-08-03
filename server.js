@@ -24,8 +24,12 @@ app.use(routes)
 
 
 if (process.env.NODE_ENV === "production"){
+  app.get('static/js/main.56f4555d.js', (req, res) => {
+      const path = require('path')
+      res.sendFile(path.join(__dirname, "./client/build/static/js/main.56f4555d.js"))
+  })
   // Use express.static to serve the client/build folder as a static directory
-  app.use(express.static("client/build")); 
+  app.use(express.static("client/build"));
 }
 
 
