@@ -20,7 +20,7 @@ class Home extends Component {
     const convos = await res.data;
 
     const btns = convos.map(convo => {
-      return <TopicBtn key={convo.topicName} name={convo.topicName} />;
+      return <TopicBtn id={convo._id} key={convo.topicName} name={convo.topicName} />;
     });
 
     this.setState(prevState => ({
@@ -32,7 +32,7 @@ class Home extends Component {
 
     axios.post('/api/convos', { topicName: input})
       .then(response => {
-        const btn = <TopicBtn key={response.data.topicName} name={response.data.topicName} />;
+        const btn = <TopicBtn  key={response.data.topicName} name={response.data.topicName} />;
         this.setState(prevState => ({
           buttons: [...prevState.buttons, btn] 
         }))
@@ -48,34 +48,24 @@ class Home extends Component {
       <div className='home-main-container'>
         <div className="admin-dashboard">
           <img src={require("../logo/g.png")} className="bg" />
-      <div className='home-main-container col-lg-8 mx-auto'>
-        <Navbar />
-        <Jumbotron>
-          <h1 className="display-4">Hello, Matthew!</h1>
-          <p></p>
-        </Jumbotron>
-
-        <CreateForm handleSubmittedForm={this.handleSubmittedForm}/>
-        {/* <TopicBtn/> */}
-        {this.state.buttons}
-
-        <CreateForm />
-        <div class="media">
-     <div class="media-body">
-       <h4 class="media-heading"> Here are some ideas if you aren't creative enough </h4>
-       <p> If you can't think of your own, try one of these. Type whichever you choose in the space above.
-       </p>
-       <TopicBtn/>
-     </div>
-     </div>
-       
-
-      </div>
-      
-    </div>
-  </div>
-  
-  
+            <div className='home-main-container col-lg-8 mx-auto'>
+              <Navbar />
+              <Jumbotron>
+                <h1 className="display-4">Hello, Matthew!</h1>
+              </Jumbotron>
+              <CreateForm handleSubmittedForm={this.handleSubmittedForm}/>
+              {/* <TopicBtn/> */}
+              <div class="media">
+                <div class="media-body">
+                  <h4 class="media-heading"> Here are some ideas if you aren't creative enough </h4>
+                  <p> If you can't think of your own, try one of these. Type whichever you choose in the space above.
+                  </p>
+                  {this.state.buttons}
+                </div>
+              </div>
+            </div> 
+          </div>
+        </div> 
     );
   }
 
