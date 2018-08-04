@@ -14,31 +14,25 @@ class AboutUs extends Component {
 
   render() { 
     return (
-      <div className = 'page-container'>
-      <div className='home-main-container col-lg-8 mx-auto'>
+
+      <div className='page-container'>
         <Navbar />
-        <Jumbotron>
-          <h1 className="display-4">About the Creators</h1>
-          <br></br>
-          <p> Just a group of four creating a giftastic final project </p>
-        </Jumbotron>
-        <Colten/>
-        <Andrew/>
-        <Matt/>
-        <Katie/>
-        
-      </div>
+        <div className='home-main-container col-lg-8 mx-auto'>
+          <Jumbotron>
+            <h1 className="display-4">About the Creators</h1>
+            <br></br>
+            <p> Just a group of four creating a fun final project </p>
+          </Jumbotron>
+          <Colten/>
+          <Andrew/>
+          <Matt/>
+          <Katie/>
+        </div>
       <Footer/>
       </div>
-      
-
-    
-
 
     );
-
   }
-
 }
 
 export default AboutUs;

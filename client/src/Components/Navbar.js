@@ -6,7 +6,7 @@ export default class Navbar extends Component {
 
   render(){
     return(
-      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{marginBottom:'2rem'}}>
+      <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{marginBottom:'2rem'}}>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -22,8 +22,8 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <NavLink className="nav-link" to="/aboutus">About Us</NavLink>
             </li>
-          </ul>
           <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
+          </ul>
           <div className="btn-group">
             <button type="button" className="btn btn-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Username
