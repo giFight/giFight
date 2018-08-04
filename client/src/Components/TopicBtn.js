@@ -1,4 +1,5 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./TopicBtn.css";
 
 
@@ -12,7 +13,7 @@ const TopicBtn = props => {
   
   return(
 
-    <a href={`/convo/${props.id}`}><button type = "button" className={`${randomClassName}`}> {props.name} </button></a>
+    <Link to={`/convo/${props.id}`}><button type = "button" className={`${randomClassName}`}> {props.name} </button></Link>
 
   );
 }

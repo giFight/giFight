@@ -113,6 +113,15 @@ ul,ol {
 }
 /* CONVO PAGE END */
 
+/* navbar */
+.nav-link{
+  font-weight: 600;
+}
+
+.btn-color{
+  background-color:#fd7e14;
+  font-weight: 600;
+}
 
 #logo {
   height: 42px;
@@ -121,5 +130,14 @@ ul,ol {
   margin-right: 50%;
   margin-left: 340px;
 }
+
+.dropdown-item:hover{
+  background-color:rgb(214, 212, 212);
+}
+
+/* .navbar-collapse{
+  display: flex;
+  justify-content: space-between;
+} */
 
 
