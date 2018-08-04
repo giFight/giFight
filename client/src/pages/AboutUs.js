@@ -18,7 +18,7 @@ class AboutUs extends Component {
         <Jumbotron>
           <h1 className="display-4">About the Creators</h1>
           <br></br>
-          <p> Just a group of four creating a fun final project </p>
+          <p> Just a group of four creating a giftastic final project </p>
         </Jumbotron>
         <Colten/>
         <Andrew/>
