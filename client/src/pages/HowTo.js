@@ -32,7 +32,7 @@ class HowTo extends Component {
      <div class="media-body">
        <h4 class="media-heading"> Make us proud </h4>
        <p> First, you pick a topic to gifersation. It's quite simple, either type in a new topic to create a button, or pick one of the buttons already there.
-        Start off simple, with a cat or a dog topic. Don't get overwhelmed.
+        Start off simple, with a cat or a dog topic. Don't forget to click the button!!
        </p>
      </div>
      </div>
@@ -44,9 +44,8 @@ class HowTo extends Component {
         </img>
       </div>
      <div class="media-body">
-       <h4 class="media-heading"> Make us proud </h4>
-       <p> First, you pick a topic to gifersation. It's quite simple, just click a button or create a new topic by typing it in!
-        Start off simple, with a cat or a dog topic. Dont' get overwhelmed.
+       <h4 class="media-heading"> Log In </h4>
+       <p> Clicking a button will bring you to the chat page. Here you will create a unique username to chat with others.
        </p>
      </div>
      </div>
@@ -58,9 +57,9 @@ class HowTo extends Component {
         </img>
       </div>
      <div class="media-body">
-       <h4 class="media-heading"> Make us proud </h4>
-       <p> First, you pick a topic to gifersation. It's quite simple, just click a button or create a new topic by typing it in!
-        Start off simple, with a cat or a dog topic. Dont' get overwhelmed.
+       <h4 class="media-heading"> Gif Away </h4>
+       <p> Gif Away! Pretty self explanatory - just type in what you would like to search for to start the chat. 
+           Then click the button to the left of the GIF to add into the chat. ENJOY!
        </p>
      </div>
      </div>
