@@ -89,7 +89,7 @@ const Footer = ({children}) => (
             <img src="https://media2.giphy.com/media/xTiTnDAP0RiCo9k85W/200w.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>
-          
+             
               
           </div>
 
