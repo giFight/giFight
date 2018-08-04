@@ -49,6 +49,16 @@ ul,ol {
   right: 0;
 }
 
+.fa-plus{
+  cursor: pointer;
+  font-Size: 6em; 
+  float:right; 
+  position:absolute; 
+  top:50%;
+  transform:translateY(-50%);
+  right: 0;
+}
+
 
 .active-cyan input[type=text] {
   border: 0;

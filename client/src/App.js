@@ -8,6 +8,7 @@ import Login from './pages/login';
 import Signup from './pages/signup'
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
+
 const App = () => (
   <Router>
     <div>

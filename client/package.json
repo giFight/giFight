@@ -2,33 +2,27 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
+  "dependencies": {
+    "axios": "^0.18.0",
+    "jquery": "^3.3.1",
+    "react": "^16.4.1",
+    "react-dom": "^16.4.1",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "socket.io": "^2.1.1"
+  },
   "proxy": {
     "/api": {
-      "target": "http://localhost:3000",
+      "target": " http://localhost:3002",
       "secure": false
-    },
-    "/auth/*": {
-      "target": "http://localhost:3000"
-    },
-    "dependencies": {
-      "axios": "^0.18.0",
-      "jquery": "^3.3.1",
-      "body-parser": "^1.18.3",
-      "express": "^4.16.3",
-      "morgan": "^1.9.0",
-      "passport": "^0.4.0",
-      "passport-github": "^1.1.0",
-      "react": "^16.4.1",
-      "react-dom": "^16.4.1",
-      "react-router-dom": "^4.3.1",
-      "react-scripts": "1.1.4"
-    },
-    "scripts": {
-      "start": "react-scripts start",
-      "build": "react-scripts build",
-      "test": "react-scripts test --env=jsdom",
-      "eject": "react-scripts eject"
-    },
-    "devDependencies": {}
-  }
+    }
+  },
+  "scripts": 
+  {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "devDependencies": {}
 }

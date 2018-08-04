@@ -13,15 +13,9 @@ const MongoStore = require('connect-mongo')(session)
 
 
 
-// const passportSetup = require('./config/passport-setup')
+const PORT = process.env.PORT || 3002;
 
 
-
-// Require all models
-// var db = require("./models");
-// require("./models/Article");
-
-const PORT = process.env.PORT || 8989;
 
 // Configure middleware
 app.use(morgan('dev'))
@@ -47,17 +41,20 @@ if (process.env.NODE_ENV === "production"){
 }
 // Connect to the Mongo DB
 
-// if (process.env.NODE_ENV === "production"){
-//   // Use express.static to serve the client/build folder as a static directory
-//   app.use(express.static("client/build")); 
-// }
+if (process.env.NODE_ENV === "production"){
+  // Use express.static to serve the client/build folder as a static directory
+  app.use(express.static("client/build")); 
+}
 
 
 // Connect to the Mongo DB
 
-// If deployed, use the deployed database. Otherwise use the local gifersationDB database
 
-var MONGODB_URI = process.env.MONGODB_URL || "mongodb://localhost:27017/gifersationDB";
+// Set mongoose to leverage built in JavaScript ES6 Promises
+// Connect to the Mongo DB
+mongoose.Promise = Promise;
+mongoose.connect(process.env.MONGODB_URL);
+
 
 let users = {}
 
@@ -110,16 +107,6 @@ removeSocket = (socket_id) => {
         users = clone_users;
     }
 };
-// Set mongoose to leverage built in JavaScript ES6 Promises
-// Connect to the Mongo DB
-mongoose.Promise = Promise;
-mongoose.connect(MONGODB_URI, function(err, db) {
-  if (err) {
-    throw err
-  }
-
-  console.log("connected ...")
-});
 
 app.use(passport.initialize())
 app.use(passport.session()) // calls serializeUser and deserializeUser
@@ -127,10 +114,7 @@ app.use(passport.session()) // calls serializeUser and deserializeUser
 // this is the post route
 app.use('/auth', user)
 
-app.post('/', function(){
-  console.log("Hit post route")
-  res.send('WOrk on the logic.')
-})
+
 
 
 // Start the server

@@ -33,41 +33,42 @@ class Signup extends Component {
     console.log(this.state.username)
 
     axios
-      // .post('/auth/signup', {
-      //   username: this.state.username,
-      //   password: this.state.password
-      // })
-    // .then(response => {
-    //   console.log(response)
-    //   if (!response.data.errmsg) {
-    //     console.log('successful signup')
-    //     this.setState({
-    //       redirectTo: '/login'
-    //     })
-    //   } else {
-    //     console.log('sign-up error')
-    //     console.log()
-    //   }
-    // }).catch(error => {
-    //   console.log('sign up server error')
-    //   console.log(error)
-    // })
-    .post('/auth/signup', {
-      username: this.state.username,
-      password: this.state.password
-    })
-      .then(response => {
-        console.log(response)
-        if (!response.data.errmsg) {
-          console.log('youre good')
-          this.setState({
-            redirectTo: '/login'
-          })
-        } else {
-          console.log('duplicate')
-        }
+      .post('/api/users/signup', {
+        username: this.state.username,
+        password: this.state.password
       })
+    .then(response => {
+      console.log(response)
+      if (!response.data.errmsg) {
+        console.log('successful signup')
+        this.setState({
+          redirectTo: '/login'
+        })
+      } else {
+        console.log('sign-up error')
+        console.log()
+      }
+    }).catch(error => {
+      console.log('sign up server error')
+      console.log(error)
+    })
   }
+  //   .post('/api/users/signup', {
+  //     username: this.state.username,
+  //     password: this.state.password
+  //   })
+  //     .then(response => {
+  //       console.log(response)
+  //       if (!response.data.errmsg) {
+  //         console.log('youre good')
+  //         this.setState({
+  //           redirectTo: '/login'
+  //         })
+  //       } else {
+  //         console.log('duplicate')
+  //       }
+  //     })
+  // }
 
 
 
@@ -114,10 +115,8 @@ class Signup extends Component {
           </div>
         </div >
       )
-    };
+    }
   }
 }
-
-
 
 export default Signup;
