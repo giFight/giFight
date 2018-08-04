@@ -5,6 +5,7 @@ import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
 import SearchContainer from '../Components/SearchContainer';
 import Chat from '../Components/chat/chat.js'
+import Footer from '../Components/Footer';
 
 
 

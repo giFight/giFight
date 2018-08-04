@@ -1,5 +1,6 @@
 import React from 'react';
 import "./Footer.css";
+import Giphy from '../logo/giphy.png'
 
 
 
@@ -20,7 +21,7 @@ const Footer = ({children}) => (
 
         
           <div className="view overlay z-depth-1-half">
-            <img src="https://media0.giphy.com/media/v6NlYjkDOEoBG/200w.webp" className="img-fluid" alt="">
+            <img src="https://media2.giphy.com/media/lAqwNegAjH8mQ/200.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>  
           </div>
@@ -103,8 +104,10 @@ const Footer = ({children}) => (
   
 
     {/*Copyright */}
-    <div className="footer-copyright text-center py-3"> <p>© 2018 Copyright:
-      Fire Breathing Rubber Duckies </p>
+    <div className="footer-copyright text-center py-3"> 
+    <p> <img src={Giphy}/> </p>
+    <p>© 2018 Copyright: Fire Breathing Rubber Duckies </p>
+     
     </div>
 
 
