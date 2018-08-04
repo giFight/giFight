@@ -15,8 +15,10 @@ class HowTo extends Component {
 
   render(){
     return (
+      <div className='page-container'>
+      <Navbar />
       <div className='home-main-container col-lg-8 mx-auto'>
-        <Navbar />
+        
         <Jumbotron>
           <h1 className="display-4">How To</h1>
           <p>This app was created for those who would rather speak in GIFs.</p>
@@ -62,7 +64,8 @@ class HowTo extends Component {
        </p>
      </div>
      </div>
-     <Footer/>
+    </div>
+    <Footer/>
     </div>
     
    

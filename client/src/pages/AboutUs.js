@@ -14,6 +14,7 @@ class AboutUs extends Component {
 
   render() { 
     return (
+      <div className = 'page-container'>
       <div className='home-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>
@@ -25,7 +26,9 @@ class AboutUs extends Component {
         <Andrew/>
         <Matt/>
         <Katie/>
-        <Footer/>
+        
+      </div>
+      <Footer/>
       </div>
       
 
