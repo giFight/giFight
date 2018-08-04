@@ -34,7 +34,7 @@ const Footer = ({children}) => (
 
         
           <div className="view overlay z-depth-1-half">
-            <img src="https://media3.giphy.com/media/eDgmbiQcujjsA/200w.webp" className="img-fluid" alt="">
+            <img src="https://media3.giphy.com/media/srb6bXZHbgDsc/giphy.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div> 
           </div>
@@ -46,7 +46,7 @@ const Footer = ({children}) => (
         <div className="col-lg-2 col-md-6 mb-4">
 
           <div className="view overlay z-depth-1-half">
-            <img src="https://media3.giphy.com/media/90FH7I3McAQ7u/200w.webp" className="img-fluid" alt="">
+            <img src="https://media3.giphy.com/media/iyot1GpzSkSqY/giphy.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>
           </div>
@@ -59,7 +59,7 @@ const Footer = ({children}) => (
 
         
           <div className="view overlay z-depth-1-half">
-            <img src="https://media0.giphy.com/media/4agObsH4umYkIwlYZx/200w.webp" className="img-fluid" alt="">
+            <img src="https://media2.giphy.com/media/a8XivWE78nwvm/200w.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>
               
@@ -73,7 +73,7 @@ const Footer = ({children}) => (
 
         
           <div className="view overlay z-depth-1-half">
-            <img src="https://media2.giphy.com/media/uZrLs0rcNc9sA/200w.webp" className="img-fluid" alt="">
+            <img src="https://media2.giphy.com/media/26gsa41wxcaHWcYMg/200w.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>
               
@@ -87,7 +87,7 @@ const Footer = ({children}) => (
 
         
           <div className="view overlay z-depth-1-half">
-            <img src="https://media2.giphy.com/media/xTiTnDAP0RiCo9k85W/200w.webp" className="img-fluid" alt="">
+            <img src="https://media1.giphy.com/media/qvDlmf39EGhCU/200w.webp" className="img-fluid" alt="">
             </img>
               <div className="mask rgba-white-light"></div>
              
