@@ -2,11 +2,9 @@ import React, { Component } from 'react';
 import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
-// import CreateBtn from '../Components/CreateBtn';
 import CreateForm from '../Components/CreateForm';
 import TopicBtn from '../Components/TopicBtn';
-import HowToInfo from '../Components/HowToInfo';
-import HowToInfo2 from '../Components/HowToInfo';
+
 
 
 
@@ -26,13 +24,13 @@ class HowTo extends Component {
       {/*Step 1 */}
       <div class="media">
         <div class="media-left">
-        <img class="media-object" src="https://media2.giphy.com/media/d2VNDNckZ1OQWbN6/200.webp" alt="...">
+        <img class="media-object" src="https://media3.giphy.com/media/X3Yj4XXXieKYM/giphy.gif" alt="...">
         </img>
       </div>
      <div class="media-body">
        <h4 class="media-heading"> Make us proud </h4>
        <p> First, you pick a topic to gifersation. It's quite simple, either type in a new topic to create a button, or pick one of the buttons already there.
-        Start off simple, with a cat or a dog topic. Don't forget to click the button!!
+           Don't forget to click the button!!
        </p>
      </div>
      </div>
@@ -40,7 +38,7 @@ class HowTo extends Component {
      {/*Step 2 */}
      <div class="media">
         <div class="media-left">
-        <img class="media-object" src="https://media2.giphy.com/media/7pV1DcmORi6Zy/200w.webp" alt="...">
+        <img class="media-object" src="https://media1.giphy.com/media/mCRJDo24UvJMA/200.webp" alt="...">
         </img>
       </div>
      <div class="media-body">
@@ -53,7 +51,7 @@ class HowTo extends Component {
      {/*Step 3 */}
      <div class="media">
         <div class="media-left">
-        <img class="media-object" src="https://media2.giphy.com/media/7pV1DcmORi6Zy/200w.webp" alt="...">
+        <img class="media-object" src="https://media1.giphy.com/media/NgEt9Mqppd5qo/200.webp" alt="...">
         </img>
       </div>
      <div class="media-body">
