@@ -3,6 +3,7 @@ import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
+import Footer from '../Components/Footer';
 import SearchContainer from '../Components/SearchContainer';
 import Chat from '../Components/chat/chat.js'
 
@@ -61,7 +62,6 @@ class Convo extends Component {
   render() {
     console.log(this.state)
     return (
-
       <div className='page-container'>
         <Navbar />
         <div className='convo-main-container col-lg-8 mx-auto'>
@@ -77,8 +77,7 @@ class Convo extends Component {
             </div>              
           </div>
         </div>
-      </div>
-      <Footer/>
+        <Footer />
       </div>
     );
   }
