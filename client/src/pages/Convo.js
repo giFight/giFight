@@ -4,11 +4,10 @@ import Navbar from '../Components/Navbar';
 import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
 import Footer from '../Components/Footer';
-import SearchContainer from '../Components/SearchContainer';
 import Chat from '../Components/chat/chat.js'
 
 
-
+// convo page
 
 class Convo extends Component {
 
