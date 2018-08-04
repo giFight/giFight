@@ -12,7 +12,7 @@ const Matt = ({children})=> (
   </div>
   <div class="media-body">
     <h4 class="media-heading">Matt </h4>
-    <p>Future programmer from the Bay Area. Fan of tech, traveling, and gifs!</p>
+    <p>Bay Area native. Future programmer. I love my dog Marley ... and gifs!</p>
   </div>
   </div>
   

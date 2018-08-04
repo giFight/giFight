@@ -64,7 +64,7 @@ class Convo extends Component {
       <div className='convo-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>
-          <h1 className="display-4">{this.state.topic.length ? this.state.topic : "Topic name"}</h1>
+          <h1 className="display-4">{this.state.topic.length ? this.state.topic : ""}</h1>
         </Jumbotron>
         <div className='convo-section'>  
           <div className='searchContainer'>
