@@ -61,6 +61,7 @@ class Convo extends Component {
   render() {
     console.log(this.state)
     return (
+      <div className = 'page-container'>
       <div className='convo-main-container col-lg-8 mx-auto'>
         <Navbar />
         <Jumbotron>
@@ -74,6 +75,8 @@ class Convo extends Component {
           <Chat />
           </div>              
         </div>
+      </div>
+      <Footer/>
       </div>
     );
   }
