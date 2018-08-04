@@ -1,0 +1,28 @@
+.container-main{
+  font-family: Arial, Helvetica, sans-serif;
+  width: 100%;
+}
+
+.footer-copyright {
+  background: gray;
+  color: white;
+  height: 30px;
+
+}
+
+.row {
+  width: 100%
+}
+
+
+/**
+ * Footer Styles
+ */
+
+.page-footer {
+  position: absolute;
+  width: 100%;
+  padding: 1px;
+  text-align: center;
+  
+}

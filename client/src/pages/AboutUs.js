@@ -6,6 +6,7 @@ import Colten from '../Components/Colten';
 import Andrew from '../Components/Andrew';
 import Katie from '../Components/Katie';
 import Matt from '../Components/Matt';
+import Footer from '../Components/Footer';
 
 class AboutUs extends Component {
 
@@ -24,7 +25,9 @@ class AboutUs extends Component {
         <Andrew/>
         <Matt/>
         <Katie/>
+        <Footer/>
       </div>
+      
 
     
 
