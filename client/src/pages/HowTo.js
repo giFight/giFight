@@ -31,7 +31,7 @@ class HowTo extends Component {
       </div>
      <div class="media-body">
        <h4 class="media-heading"> Make us proud </h4>
-       <p> First, you pick a topic to gifersation. It's quite simple, just click a button or create a new topic by typing it in!
+       <p> First, you pick a topic to gifersation. It's quite simple, either type in a new topic to create a button, or pick one of the buttons already there.
         Start off simple, with a cat or a dog topic. Don't get overwhelmed.
        </p>
      </div>
