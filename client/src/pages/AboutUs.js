@@ -6,6 +6,7 @@ import Colten from '../Components/Colten';
 import Andrew from '../Components/Andrew';
 import Katie from '../Components/Katie';
 import Matt from '../Components/Matt';
+import Footer from '../Components/Footer';
 
 class AboutUs extends Component {
 
@@ -13,6 +14,7 @@ class AboutUs extends Component {
 
   render() { 
     return (
+
       <div className='page-container'>
         <Navbar />
         <div className='home-main-container col-lg-8 mx-auto'>
@@ -26,7 +28,9 @@ class AboutUs extends Component {
           <Matt/>
           <Katie/>
         </div>
+      <Footer/>
       </div>
+
     );
   }
 }

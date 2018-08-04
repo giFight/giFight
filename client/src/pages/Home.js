@@ -8,6 +8,7 @@ import TopicBtn from '../Components/TopicBtn';
 import axios from "axios";
 
 
+
 class Home extends Component {
 
   state = {
@@ -57,15 +58,20 @@ class Home extends Component {
               {/* <TopicBtn/> */}
               <div class="media">
                 <div class="media-body">
-                  <h4 class="media-heading"> Here are some ideas if you aren't creative enough </h4>
-                  <p> If you can't think of your own, try one of these. Type whichever you choose in the space above.
+                  <h4 class="media-heading"> Here are some topic ideas </h4>
+                  <p> If you can't think of your own, try one of these. Type in the space above to add more buttons.
                   </p>
                   {this.state.buttons}
                 </div>
               </div>
             </div> 
           </div>
+          <Footer/>
         </div> 
+    
+       
+        
+       
     );
   }
 
