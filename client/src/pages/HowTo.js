@@ -5,7 +5,7 @@ import Navbar from '../Components/Navbar';
 import CreateForm from '../Components/CreateForm';
 import TopicBtn from '../Components/TopicBtn';
 import Footer from '../Components/Footer';
-
+import Giphy from '../logo/giphy.png'
 
 
 
