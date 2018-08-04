@@ -48,8 +48,8 @@ class Home extends Component {
       <div className='home-main-container'>
         <div className="admin-dashboard">
           <img src={require("../logo/g.png")} className="bg" />
+            <Navbar />
             <div className='home-main-container col-lg-8 mx-auto'>
-              <Navbar />
               <Jumbotron>
                 <h1 className="display-4">Hello, Matthew!</h1>
               </Jumbotron>
