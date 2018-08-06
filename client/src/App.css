@@ -149,7 +149,15 @@ ul,ol {
 }
 
 
-
-
+/* taking out the logo and footer gifs when screen size is reduced  */
+@media only screen and (max-width: 993px) {
+  /* For mobile phones: */
+  [id*="logo"] {
+      display: none;
+  }
+  [class*="view overlay"] {
+      display: none;
+  }
+}
 
 
