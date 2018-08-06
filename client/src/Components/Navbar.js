@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
+// Original Username Button (with dropdown menu) was commented out and replaced by a regular sign out button. Dropdown items were also commented out. In the future, these can be added back. just remove line 31
+
 export default class Navbar extends Component {
 
 
@@ -22,18 +24,19 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <NavLink className="nav-link" to="/aboutus">About Us</NavLink>
             </li>
-          <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
+            <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
           </ul>
           <div className="btn-group">
-            <button type="button" className="btn btn-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Username
+            {/* <button type="button" className="btn btn-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> */}
+            <button type="button" className="btn btn-color sign out">
+              Sign Out
             </button>
-            <div className="dropdown-menu dropdown-menu-right">
+            {/* <div className="dropdown-menu dropdown-menu-right">
               <button className="dropdown-item" type="button">My Convos</button>
               <button className="dropdown-item" type="button">My Likes</button>
               <div className="dropdown-divider"></div>
               <button className="dropdown-item" type="button">Sign Out</button>
-            </div>
+            </div> */}
           </div>
         </div>
       </nav>
