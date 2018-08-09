@@ -61,7 +61,7 @@ class GifBox extends React.Component{
             params: {
                 api_key: 'ln9tgm0RCZiGOcD5D6Gm3Wr8JYXLq4Zh',
                 q : this.state.query,
-                limit : 10,
+                limit : 50,
                 offset : this.state.offset
             }
         })

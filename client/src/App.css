@@ -8,7 +8,7 @@ img.bg {
   width: 250px;
   height: 250px;
   position: fixed;
-  top: 45px;
+  top: 150px;
   left: 2px;
 }
 
@@ -113,13 +113,51 @@ ul,ol {
 }
 /* CONVO PAGE END */
 
+/* navbar */
+.nav-link{
+  font-weight: 600;
+}
+
+.btn-color{
+  background-color:#fd7e14;
+  font-weight: 600;
+}
 
 #logo {
   height: 42px;
   width: 15%;
-  position: fixed;
-  margin-right: 50%;
-  margin-left: 340px;
+  /* position: fixed; */
+  margin-left: 30%;
+  /* margin-left: 340px; */
+}
+
+.dropdown-item:hover{
+  background-color:rgb(214, 212, 212);
+}
+
+.btn-group{
+  margin-right: 25px;
+}
+
+.navbar-collapse{
+  display: flex;
+  justify-content: space-between;
+}
+
+.jumbotron{
+  font-family: 'Bangers', cursive;
+}
+
+
+/* taking out the logo and footer gifs when screen size is reduced  */
+@media only screen and (max-width: 993px) {
+  /* For mobile phones: */
+  [id*="logo"] {
+      display: none;
+  }
+  [class*="view overlay"] {
+      display: none;
+  }
 }
 
 

@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 export default class CreateForm extends Component {
   
   state = {
-    topic: '',
+    search: '',
   }
   
   onSearchChange = e => {
@@ -14,8 +14,9 @@ export default class CreateForm extends Component {
   }
   
   handleSubmit = e => {
+    e.preventDefault()
     const input = this.state.search;
-    this.props.handleSubmittedForm(e, input);
+    this.props.handleSubmittedForm(input);
     this.setState({ search: '' });
   }
   
@@ -31,7 +32,7 @@ export default class CreateForm extends Component {
                aria-label="Search" 
                placeholder="Create a new topic..."
                autoComplete="off"
-               style={{borderRadius: 0, flex:1,padding: '1em .5em .5em 35px', fontSize: '18px', lineHeight:1, background: 'transparent'}}/>
+               style={{borderRadius: 0, flex:1,padding: '1em .5em .5em 35px', fontSize: '18px', lineHeight:1, background: 'transparent', color: 'white'}}/>
         <i className="fa fa-quote-right" aria-hidden="true" style={{fontSize: '25px',padding: '.5em 0 .5em', marginLeft: '-25px'}}></i>
       </form>      
     );

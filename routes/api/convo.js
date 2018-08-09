@@ -7,4 +7,7 @@ router.route("/:id")
   .post(convoController.create)
   .put(convoController.update)
 
+router.route('/')
+  .post(convoController.create)
+
 module.exports = router;
