@@ -12,4 +12,5 @@ Other technologies/tools used: Mongoose, PassportJS, Bootstrap, and Socket.
 Powered by the Giphy API.
 
 ## For Developers
-1) First, run "npm install". 2) Then run the commannd "npm run dev". 
+1) Run "npm install". 
+2) Then run the commannd "npm run dev". 
