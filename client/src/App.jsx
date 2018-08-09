@@ -6,6 +6,7 @@ import AboutUs from './pages/AboutUs';
 import Convo from './pages/Convo';
 import Login from './pages/login';
 import Signup from './pages/signup'
+import NotFound from './pages/NotFound';
 import {BrowserRouter as Router, Route, Switch} from "react-router-dom";
 
 
@@ -22,6 +23,7 @@ const App = () => (
         <Route exact path='/login' component={Login} />
         <Route exact path='/logout' component={Home} />
         <Route exact path='/signup' component={Signup} />
+        {/* <Route component={NotFound} /> */}
       </Switch>
     </div>
   </Router>

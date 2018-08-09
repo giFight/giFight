@@ -1,3 +1,4 @@
+require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
@@ -7,44 +8,43 @@ let server = require('http').Server(app);
 let io = require('socket.io')(server)
 const morgan = require('morgan')
 const user = require('./routes/api/users')
-const session = require('express-session')
 const passport = require('./passport')
+const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
-
-
 
 const PORT = process.env.PORT || 3002;
 
 
 
 // Configure middleware
-app.use(morgan('dev'))
 
+app.use(morgan('dev'))
 // Use body-parser for handling form submissions
 app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json())
+app.use(
+	session({
+		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+		store: new MongoStore({ mongooseConnection: mongoose.connection}),
+		resave: false, //required
+		saveUninitialized: false //required
+	})
+)
+app.use( (req, res, next) => {
+    console.log('req.session', req.session);
+    return next();
+  });
 
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
+
+if (process.env.NODE_ENV === "production"){
+  // Use express.static to serve the client/build folder as a static directory
+  app.use(express.static("client/build"));
+}
 app.use(routes)
 
-app.use(
-  session({
-  secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
-  store: new MongoStore({ mongooseConnection: mongoose.connection }),
-  resave: false, //required
-  saveUninitialized: false //required
-  })
-)
-
-if (process.env.NODE_ENV === "production"){
-  // Use express.static to serve the client/build folder as a static directory
-  app.use(express.static("client/build")); 
-}
-// Connect to the Mongo DB
-
-if (process.env.NODE_ENV === "production"){
-  // Use express.static to serve the client/build folder as a static directory
-  app.use(express.static("client/build")); 
-}
+ app.use('/auth', user)
 
 
 // Connect to the Mongo DB
@@ -53,7 +53,13 @@ if (process.env.NODE_ENV === "production"){
 // Set mongoose to leverage built in JavaScript ES6 Promises
 // Connect to the Mongo DB
 mongoose.Promise = Promise;
-mongoose.connect(process.env.MONGODB_URL);
+
+console.log(`
+process.env.MONGODB_URI: ${ process.env.MONGODB_URI }
+`)
+
+mongoose.connect(process.env.MONGODB_URI);
+
 
 
 let users = {}
@@ -107,15 +113,6 @@ removeSocket = (socket_id) => {
         users = clone_users;
     }
 };
-
-app.use(passport.initialize())
-app.use(passport.session()) // calls serializeUser and deserializeUser
-
-// this is the post route
-app.use('/auth', user)
-
-
-
 
 // Start the server
 server.listen(PORT, () => {

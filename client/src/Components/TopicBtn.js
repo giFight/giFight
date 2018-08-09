@@ -1,43 +1,20 @@
 import React from "react";
+import {Link} from "react-router-dom";
 import "./TopicBtn.css";
 
 
 
-// The ...props means, spread all of the passed props onto this element
-// That way we don't have to define them all individually
-
 
 const TopicBtn = props => { 
   
-  //Arrays of topics (Each array is a different color)
-  const topicList = ["Friday", "Hungover", "My weekend", "Where's David?", "Me at work", "Cats", "Dogs"];
-  const topicListTwo = ["Where's Waldo?", "Sunday Funday", "YOLO", "Shots o' clock", "Me at work", "People of Bart"];
-  const topicListThree = ["LIT", "Love", "Selfie", "Motivation", "I'm done", "I need food", "Aloha"];
-  const topicListFour = ["My family", "Walmart People", "Trump", "JJ"]
 
-  let topics = topicList.map(topic =>
-    <button type = "button" className="btn btn-success"> {topic} </button>
-  );
-  
-  let topicsTwo = topicListTwo.map(topic =>
-    <button type = "button" className="btn btn-danger"> {topic} </button>
-  );
-  let topicsThree = topicListThree.map(topic =>
-    <button type = "button" className="btn btn-info"> {topic} </button>
-  );
-  let topicsFour = topicListFour.map(topic =>
-    <button type = "button" className="btn btn-success"> {topic} </button>
-  );
+  const classArray = ['btn btn-success', 'btn btn-danger', 'btn btn-info', 'btn btn-warning', 'btn btn-primary', 'btn btn-primary']
+  const randomClassName= classArray[Math.floor(Math.random() * classArray.length)]
   
   return(
-    <div className='inner-container'>
-      <ul className="topic-list" >
-        {topics}
-        {topicsTwo}
-        {topicsThree}
-        {topicsFour}
-      </ul> 
-    </div>
+
+    <Link to={`/convo/${props.id}`}><button type = "button" className={`${randomClassName}`}> {props.name} </button></Link>
+
   );
 }
 
