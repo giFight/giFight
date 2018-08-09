@@ -14,7 +14,9 @@ const Colten = ({children})=> (
   </div>
   <div class="media-body">
     <h4 class="media-heading">Colten</h4>
-    <p></p>
+    <p>
+      Colten is a computer programming student at UC Berkeley Extensions. He has been to Universal Studios Florida not once, but twice, and is a long suffering Dolphins fan. 
+    </p>
   </div>
   </div>
   
