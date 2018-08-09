@@ -1,11 +1,15 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
-const app = express();
+let app = require('express')();
 let server = require('http').Server(app);
-let io = require('socket.io')(server)
+let io = require('socket.io')(server);
+const morgan = require('morgan')
+const user = require('./routes/api/users')
+const session = require('express-session')
+const passport = require('./passport')
+const MongoStore = require('connect-mongo')(session)
 
 
 
@@ -14,10 +18,10 @@ const PORT = process.env.PORT || 3002;
 
 
 // Configure middleware
-
+app.use(morgan('dev'))
 
 // Use body-parser for handling form submissions
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 
 if (process.env.NODE_ENV === "production"){
@@ -43,8 +47,7 @@ process.env.MONGODB_URI: ${ process.env.MONGODB_URI }
 mongoose.connect(process.env.MONGODB_URI);
 
 
-
-let users = {}
+let users = {};
 
 getUsers = () => {
     return Object.keys(users).map(function(key){
@@ -96,39 +99,49 @@ removeSocket = (socket_id) => {
     }
 };
 
+
+app.use(passport.initialize())
+app.use(passport.session()) // calls serializeUser and deserializeUser
+
+// this is the post route
+app.use('/auth', user)
+
+
+
+
 // Start the server
 server.listen(PORT, () => {
   console.log('Running server on 127.0.0.1:' + PORT);
 });
 
 io.on('connection', (socket) => {
-  let query = socket.request._query,
-      user = {
-          username : query.username,
-          uid : query.uid,
-          socket_id : socket.id
-      };
+    let query = socket.request._query,
+        user = {
+            username : query.username,
+            uid : query.uid,
+            socket_id : socket.id
+        };
 
-  if(users[user.uid] !== undefined){
-      createSocket(user);
-      socket.emit('updateUsersList', getUsers());
-  }
-  else{
-      createUser(user);
-      io.emit('updateUsersList', getUsers());
-  }
+    if(users[user.uid] !== undefined){
+        createSocket(user);
+        socket.emit('updateUsersList', getUsers());
+    }
+    else{
+        createUser(user);
+        io.emit('updateUsersList', getUsers());
+    }
 
-  socket.on('message', (data) => {
-      console.log(data);
-      socket.broadcast.emit('message', {
-          username : data.username,
-          message : data.message,
-          uid : data.uid
-      });
-  });
+    socket.on('message', (data) => {
+        console.log(data);
+        socket.broadcast.emit('message', {
+            username : data.username,
+            message : data.message,
+            uid : data.uid
+        });
+    });
 
-  socket.on('disconnect', () => {
-      removeSocket(socket.id);
-      io.emit('updateUsersList', getUsers());
-  });
+    socket.on('disconnect', () => {
+        removeSocket(socket.id);
+        io.emit('updateUsersList', getUsers());
+    });
 });
