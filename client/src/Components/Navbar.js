@@ -34,7 +34,7 @@ export default class Navbar extends Component {
               <div className="dropdown-divider"></div>
               <button className="dropdown-item" type="button"><a href='/login'>Log In</a></button>
               <button className="dropdown-item" type="button"><a href='/signup'>Sign Up</a></button>
-              <div className="dropdown-divider"></div>
+              <div class="dropdown-divider"></div>
               <button className="dropdown-item" type="button"><a href='/logout'>Log Out</a></button>
             </div>
           </div>
