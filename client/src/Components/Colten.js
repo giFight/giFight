@@ -14,7 +14,7 @@ const Colten = ({children})=> (
   </div>
   <div class="media-body">
     <h4 class="media-heading">Colten</h4>
-    ...
+    <p></p>
   </div>
   </div>
   

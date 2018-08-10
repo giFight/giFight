@@ -1,24 +1,23 @@
 .media > .media-left {
-  background: #fff;
-  border-radius: 2px;
-  height: 200px;
+  background: transparent;
+  border-radius: 5px;
+  height: 210px;
   overflow: hidden;
   margin: 1rem;
   position: relative;
-  width: 290px;
-  box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+  width: 300px;
   text-align: center;
 }
 
 .media  {
   margin: 15px;
   height: auto;
-  border: 2px;
+  border: 5px;
   overflow: hidden;
   text-align: center;
   background: whitesmoke;
-  border-radius: 30px;
-  padding: 10px;
+  border-radius: 10px;
+  padding: 15px;
 }
 .media > .media-object {
   margin-top: 7px;

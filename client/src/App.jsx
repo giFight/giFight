@@ -24,6 +24,7 @@ const App = () => (
         <Route exact path='/logout' component={Home} />
         <Route exact path='/signup' component={Signup} />
         {/* <Route component={NotFound} /> */}
+        <Route component={NotFound} />
       </Switch>
     </div>
   </Router>

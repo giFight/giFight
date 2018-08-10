@@ -48,8 +48,8 @@ class Home extends Component {
       <div className='home-main-container'>
         <div className="admin-dashboard">
           <img src={require("../logo/g.png")} className="bg" />
+            <Navbar />
             <div className='home-main-container col-lg-8 mx-auto'>
-              <Navbar />
               <Jumbotron>
                 <h1 className="display-4">Hello, Matthew!</h1>
               </Jumbotron>
@@ -57,15 +57,20 @@ class Home extends Component {
               {/* <TopicBtn/> */}
               <div class="media">
                 <div class="media-body">
-                  <h4 class="media-heading"> Here are some ideas if you aren't creative enough </h4>
-                  <p> If you can't think of your own, try one of these. Type whichever you choose in the space above.
+                  <h4 class="media-heading"> Here are some topic ideas </h4>
+                  <p> If you can't think of your own, try one of these. Type in the space above to add more buttons.
                   </p>
                   {this.state.buttons}
                 </div>
               </div>
             </div> 
           </div>
+          <Footer/>
         </div> 
+    
+       
+        
+       
     );
   }
 

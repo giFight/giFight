@@ -104,8 +104,8 @@ class Login extends Component {
                   </div>
                 </form>
               </div>
-              <a class="btn btn-block btn-social btn-twitter" href='/auth/github'>
-                <span class="fa fa-github"></span> Sign in with Github</a>
+              <a className="btn btn-block btn-social btn-twitter" href='/auth/github'>
+                <span className="fa fa-github"></span> Sign in with Github</a>
             </Jumbotron>
           </div>
         </div>

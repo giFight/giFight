@@ -3,11 +3,11 @@ import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import axios from 'axios';
 import ConvoThread from '../Components/ConvoThread';
-import SearchContainer from '../Components/SearchContainer';
+import Footer from '../Components/Footer';
 import Chat from '../Components/chat/chat.js'
 
 
-
+// convo page
 
 class Convo extends Component {
 
@@ -61,23 +61,25 @@ class Convo extends Component {
   render() {
     console.log(this.state)
     return (
-      <div className='convo-main-container col-lg-8 mx-auto'>
+      <div className='page-container'>
         <Navbar />
-        <Jumbotron>
-          <h1 className="display-4">{this.state.topic.length ? this.state.topic : ""}</h1>
-        </Jumbotron>
-        <div className='convo-section'>  
-          <div className='searchContainer'>
-            {/* <SearchContainer convoButton={this.handleSelectButton} />     */}
-          </div>   
-          <div className="outer-convo-container mx-auto">
-          <Chat />
-          </div>              
+        <div className='convo-main-container col-lg-8 mx-auto'>
+          <Jumbotron>
+            <h1 className="display-4">{this.state.topic.length ? this.state.topic : ""}</h1>
+          </Jumbotron>
+          <div className='convo-section'>  
+            <div className='searchContainer'>
+              {/* <SearchContainer convoButton={this.handleSelectButton} />     */}
+            </div>   
+            <div className="outer-convo-container mx-auto">
+            <Chat />
+            </div>              
+          </div>
         </div>
+        <Footer />
       </div>
     );
   }
-
 }
 
 export default Convo;

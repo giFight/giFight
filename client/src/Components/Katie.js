@@ -12,7 +12,7 @@ const Katie = ({children})=> (
   </div>
   <div class="media-body">
     <h4 class="media-heading">Katie</h4>
-    <p> Katie decided to attend the Berkeley Coding BootCamp to escape the retail life and change the world one line of code at a time.
+    <p> Katie attends the Berkeley Coding BootCamp and is pursuing a career in Coding.
         In her free time she enjoys traveling with her boyfriend, looking at gifs and petting every dog she encounters.
     </p>
   </div>

@@ -16,7 +16,7 @@ const Andrew = ({children})=> (
 </div>
 <div class="media-body">
   <h4 class="media-heading">Andrew</h4>
-  ...
+  ...<p>Andrew is a San Francisco native who wanted a career change from Transportation and Logistics to Coding. He enjoys watching sports, listening to music, and spending time with his kids Troy and Owen.</p>
 </div>
 </div>
 

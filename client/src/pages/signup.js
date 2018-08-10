@@ -51,24 +51,6 @@ class Signup extends Component {
       console.log(error)
     })
   }
-  //   .post('/api/users/signup', {
-  //     username: this.state.username,
-  //     password: this.state.password
-  //   })
-  //     .then(response => {
-  //       console.log(response)
-  //       if (!response.data.errmsg) {
-  //         console.log('youre good')
-  //         this.setState({
-  //           redirectTo: '/login'
-  //         })
-  //       } else {
-  //         console.log('duplicate')
-  //       }
-  //     })
-  // }
-
-
 
   render() {
     if (this.state.redirectTo) {
