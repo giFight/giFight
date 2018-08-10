@@ -4,7 +4,6 @@ const usersController = require("../../controllers/usersController");
 const User = require('../../models/user')
 const passport = require('../../passport')
 
-
 router.post('/', (req, res) => {
     console.log('user signup');
 

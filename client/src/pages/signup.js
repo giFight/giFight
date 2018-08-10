@@ -90,6 +90,7 @@ class Signup extends Component {
                 </div>
                 <a className="btn btn-block btn-social btn-twitter" href='/auth/github'>
                   <span className="fa fa-github"></span> Sign in with Github</a>
+
               </Jumbotron>
             </div>
           </div>

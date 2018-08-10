@@ -13,7 +13,14 @@
     "react-scripts": "1.1.4",
     "socket.io": "^2.1.1"
   },
-  "scripts": {
+  "proxy": {
+    "/api": {
+      "target": " http://localhost:3002",
+      "secure": false
+    }
+  },
+  "scripts": 
+  {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

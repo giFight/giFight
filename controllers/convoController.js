@@ -1,11 +1,6 @@
 const db = require("../models")
 
 module.exports = {
-  all: function(req, res) {
-    db.Convo.find({}).then(records => {
-      return res.send(records);
-    })
-  },
   get: function(req, res) {
     console.log(req.params.id)
     db.Convo.findById(req.params.id).then(foundRecord => {
