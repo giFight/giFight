@@ -1,9 +1,8 @@
-require("dotenv").config();
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const routes = require("./routes");
-const app = express();
+let app = require('express')();
 let server = require('http').Server(app);
 let io = require('socket.io')(server)
 const morgan = require('morgan')
@@ -12,6 +11,7 @@ const passport = require('./passport')
 const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
 
+
 const PORT = process.env.PORT || 3002;
 
 
@@ -19,8 +19,9 @@ const PORT = process.env.PORT || 3002;
 // Configure middleware
 
 app.use(morgan('dev'))
+
 // Use body-parser for handling form submissions
-app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
 app.use(
 	session({
@@ -61,8 +62,7 @@ process.env.MONGODB_URI: ${ process.env.MONGODB_URI }
 mongoose.connect(process.env.MONGODB_URI);
 
 
-
-let users = {}
+let users = {};
 
 getUsers = () => {
     return Object.keys(users).map(function(key){
@@ -114,6 +114,16 @@ removeSocket = (socket_id) => {
     }
 };
 
+
+app.use(passport.initialize())
+app.use(passport.session()) // calls serializeUser and deserializeUser
+
+// this is the post route
+app.use('/auth', user)
+
+
+
+
 // Start the server
 server.listen(PORT, () => {
   console.log('Running server on 127.0.0.1:' + PORT);
@@ -150,3 +160,4 @@ io.on('connection', (socket) => {
       io.emit('updateUsersList', getUsers());
   });
 });
+

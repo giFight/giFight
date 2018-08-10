@@ -32,6 +32,7 @@ class Signup extends Component {
 
     axios
       .post('api/users/', {
+
         username: this.state.username,
         password: this.state.password
       })
@@ -51,6 +52,7 @@ class Signup extends Component {
       console.log(error)
     })
   }
+
 
   render() {
     if (this.state.redirectTo) {
@@ -90,6 +92,7 @@ class Signup extends Component {
                 </div>
                 <a className="btn btn-block btn-social btn-twitter" href='/auth/github'>
                   <span className="fa fa-github"></span> Sign in with Github</a>
+
               </Jumbotron>
             </div>
           </div>
