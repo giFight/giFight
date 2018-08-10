@@ -4,13 +4,12 @@ const bodyParser = require("body-parser");
 const routes = require("./routes");
 let app = require('express')();
 let server = require('http').Server(app);
-let io = require('socket.io')(server);
+let io = require('socket.io')(server)
 const morgan = require('morgan')
 const user = require('./routes/api/users')
-const session = require('express-session')
 const passport = require('./passport')
+const session = require('express-session')
 const MongoStore = require('connect-mongo')(session)
-
 
 
 const PORT = process.env.PORT || 3002;
@@ -18,11 +17,27 @@ const PORT = process.env.PORT || 3002;
 
 
 // Configure middleware
+
 app.use(morgan('dev'))
 
 // Use body-parser for handling form submissions
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json())
+app.use(
+	session({
+		secret: 'fraggle-rock', //pick a random string to make the hash that is generated secure
+		store: new MongoStore({ mongooseConnection: mongoose.connection}),
+		resave: false, //required
+		saveUninitialized: false //required
+	})
+)
+app.use( (req, res, next) => {
+    console.log('req.session', req.session);
+    return next();
+  });
+
+app.use(passport.initialize())
+app.use(passport.session()) // calls the deserializeUser
 
 if (process.env.NODE_ENV === "production"){
   // Use express.static to serve the client/build folder as a static directory
@@ -30,7 +45,7 @@ if (process.env.NODE_ENV === "production"){
 }
 app.use(routes)
 
-
+ app.use('/auth', user)
 
 
 // Connect to the Mongo DB
@@ -115,33 +130,33 @@ server.listen(PORT, () => {
 });
 
 io.on('connection', (socket) => {
-    let query = socket.request._query,
-        user = {
-            username : query.username,
-            uid : query.uid,
-            socket_id : socket.id
-        };
+  let query = socket.request._query,
+      user = {
+          username : query.username,
+          uid : query.uid,
+          socket_id : socket.id
+      };
 
-    if(users[user.uid] !== undefined){
-        createSocket(user);
-        socket.emit('updateUsersList', getUsers());
-    }
-    else{
-        createUser(user);
-        io.emit('updateUsersList', getUsers());
-    }
+  if(users[user.uid] !== undefined){
+      createSocket(user);
+      socket.emit('updateUsersList', getUsers());
+  }
+  else{
+      createUser(user);
+      io.emit('updateUsersList', getUsers());
+  }
 
-    socket.on('message', (data) => {
-        console.log(data);
-        socket.broadcast.emit('message', {
-            username : data.username,
-            message : data.message,
-            uid : data.uid
-        });
-    });
+  socket.on('message', (data) => {
+      console.log(data);
+      socket.broadcast.emit('message', {
+          username : data.username,
+          message : data.message,
+          uid : data.uid
+      });
+  });
 
-    socket.on('disconnect', () => {
-        removeSocket(socket.id);
-        io.emit('updateUsersList', getUsers());
-    });
+  socket.on('disconnect', () => {
+      removeSocket(socket.id);
+      io.emit('updateUsersList', getUsers());
+  });
 });

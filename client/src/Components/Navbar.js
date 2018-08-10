@@ -1,14 +1,12 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom';
 
-// Original Username Button (with dropdown menu) was commented out and replaced by a regular sign out button. Dropdown items were also commented out. In the future, these can be added back. just remove line 31
-
 export default class Navbar extends Component {
 
 
   render(){
     return(
-      <nav className="navbar navbar-expand-lg navbar-dark bg-dark" style={{marginBottom:'2rem'}}>
+      <nav className="navbar navbar-expand-lg navbar-light bg-light" style={{marginBottom:'2rem'}}>
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
           <span className="navbar-toggler-icon"></span>
         </button>
@@ -24,19 +22,21 @@ export default class Navbar extends Component {
             <li className="nav-item">
               <NavLink className="nav-link" to="/aboutus">About Us</NavLink>
             </li>
-            <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
           </ul>
+          <img id="logo" src={require('../logo/gifersation.png')} alt="logo" />
           <div className="btn-group">
-            {/* <button type="button" className="btn btn-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> */}
-            <button type="button" className="btn btn-color sign out">
-              Sign Out
+            <button type="button" className="btn btn-color dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Username
             </button>
-            {/* <div className="dropdown-menu dropdown-menu-right">
+            <div className="dropdown-menu dropdown-menu-right">
               <button className="dropdown-item" type="button">My Convos</button>
               <button className="dropdown-item" type="button">My Likes</button>
               <div className="dropdown-divider"></div>
-              <button className="dropdown-item" type="button">Sign Out</button>
-            </div> */}
+              <button className="dropdown-item" type="button"><a href='/login'>Log In</a></button>
+              <button className="dropdown-item" type="button"><a href='/signup'>Sign Up</a></button>
+              <div className="dropdown-divider"></div>
+              <button className="dropdown-item" type="button"><a href='/logout'>Log Out</a></button>
+            </div>
           </div>
         </div>
       </nav>

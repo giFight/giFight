@@ -14,8 +14,6 @@ class Signup extends Component {
       username: '',
       password: '',
       confirmPassword: '',
-      redirectTo: null
-
     }
     this.handleSubmit = this.handleSubmit.bind(this)
     this.handleChange = this.handleChange.bind(this)
@@ -28,12 +26,12 @@ class Signup extends Component {
     })
   }
   handleSubmit(event) {
-    event.preventDefault()
     console.log('sign-up handleSubmit, username: ')
     console.log(this.state.username)
+    event.preventDefault()
 
     axios
-      .post('/api/users/signup', {
+      .post('api/users/', {
         username: this.state.username,
         password: this.state.password
       })
@@ -53,24 +51,6 @@ class Signup extends Component {
       console.log(error)
     })
   }
-  //   .post('/api/users/signup', {
-  //     username: this.state.username,
-  //     password: this.state.password
-  //   })
-  //     .then(response => {
-  //       console.log(response)
-  //       if (!response.data.errmsg) {
-  //         console.log('youre good')
-  //         this.setState({
-  //           redirectTo: '/login'
-  //         })
-  //       } else {
-  //         console.log('duplicate')
-  //       }
-  //     })
-  // }
-
-
 
   render() {
     if (this.state.redirectTo) {
@@ -108,8 +88,9 @@ class Signup extends Component {
                   />
                   <button onClick={this.handleSubmit}>Sign up</button>
                 </div>
-                <a class="btn btn-block btn-social btn-twitter" href='/auth/github'>
-                  <span class="fa fa-github"></span> Sign in with Github</a>
+                <a className="btn btn-block btn-social btn-twitter" href='/auth/github'>
+                  <span className="fa fa-github"></span> Sign in with Github</a>
+
               </Jumbotron>
             </div>
           </div>

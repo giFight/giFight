@@ -80,7 +80,6 @@ class Convo extends Component {
       </div>
     );
   }
-
 }
 
 export default Convo;
