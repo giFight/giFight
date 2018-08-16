@@ -20,8 +20,10 @@ class Home extends Component {
     const res = await axios.get(`/api/convos/all`);
     const convos = await res.data;
 
+    console.log(convos)
+
     const btns = convos.map(convo => {
-      return <TopicBtn id={convo._id} key={convo.topicName} name={convo.topicName} />;
+      return <TopicBtn id={convo._id} key={convo._id} name={convo.topicName} />;
     });
 
     this.setState(prevState => ({
@@ -56,9 +58,9 @@ class Home extends Component {
               </Jumbotron>
               <CreateForm handleSubmittedForm={this.handleSubmittedForm}/>
               {/* <TopicBtn/> */}
-              <div class="media">
-                <div class="media-body">
-                  <h4 class="media-heading"> Here are some topic ideas </h4>
+              <div className="media">
+                <div className="media-body">
+                  <h4 className="media-heading"> Here are some topic ideas </h4>
                   <p> If you can't think of your own, try one of these. Type in the space above to add more buttons.
                   </p>
                   {this.state.buttons}

@@ -105,7 +105,7 @@ const Footer = ({children}) => (
 
     {/*Copyright */}
     <div className="footer-copyright text-center py-3"> 
-    <p> <img src={Giphy}/> </p>
+    <p> <img src={Giphy} alt="" /> </p>
     <p>© 2018 Copyright: Fire Breathing Rubber Duckies </p>
      
     </div>
