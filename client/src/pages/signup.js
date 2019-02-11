@@ -4,6 +4,7 @@ import { Redirect } from 'react-router-dom'
 import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import axios from 'axios'
+import LoginNav from '../Components/LoginNav';
 
 
 class Signup extends Component {
@@ -79,12 +80,13 @@ class Signup extends Component {
       return (
         <div className='home-main-container'>
           <div className="admin-dashboard">
-            <img src={require("../logo/fight.png")} className="bg" />
+            {/* <img src={require("../logo/fight.png")} className="bg" /> */} 
+              <LoginNav />
             <div className='home-main-container col-lg-8 mx-auto'>
-              <Navbar />
               <Jumbotron>
                 <div className="SignupForm">
-                  <h1>Signup form</h1>
+                  <h1>Sign Up </h1>
+                  <h3>Join the gifersation </h3>
                   <label htmlFor="username">Username: </label>
                   <input
                     type="text"

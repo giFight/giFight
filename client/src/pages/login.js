@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Jumbotron from '../Components/Jumbotron';
-import Navbar from '../Components/Navbar';
+import LoginNav from '../Components/LoginNav';
 import axios from 'axios'
 
 class Login extends Component {
@@ -59,8 +59,8 @@ class Login extends Component {
       <div className='home-main-container'>
         <div className="admin-dashboard">
           <img src={require("../logo/fight.png")} className="bg" />
+            <LoginNav />
           <div className='home-main-container col-lg-8 mx-auto'>
-            <Navbar />
             <Jumbotron>
               <div>
                 <h4>Login</h4>
