@@ -4,6 +4,9 @@ import Jumbotron from '../Components/Jumbotron';
 import LoginNav from '../Components/LoginNav';
 import axios from 'axios'
 
+// Will probably delete this page as I am combining signup and login into one page
+
+
 class Login extends Component {
   constructor() {
     super()

@@ -5,6 +5,7 @@ import Jumbotron from '../Components/Jumbotron';
 import Navbar from '../Components/Navbar';
 import axios from 'axios'
 import LoginNav from '../Components/LoginNav';
+import Gallery from '../Components/Gallery';
 
 
 class Signup extends Component {
@@ -78,7 +79,7 @@ class Signup extends Component {
       return <Redirect to={{ pathname: this.state.redirectTo }} />
     } else {
       return (
-        <div className='home-main-container'>
+        <div className='home-main-container signup'>
           <div className="admin-dashboard">
             {/* <img src={require("../logo/fight.png")} className="bg" /> */} 
               <LoginNav />
